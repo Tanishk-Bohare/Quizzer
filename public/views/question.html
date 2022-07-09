@@ -1,0 +1,17 @@
+<div id="question">
+  <form>
+    Question: <input type="text" ng-model="question.question" /><br /><br>
+  </form>
+  <div id="answers">
+    <form id="answerForm">
+    Mark the correct answer:
+      <br>
+      <div ng-repeat="answer in question.answers">
+        <input type="radio" name="answerRadio" ng-value=true ng-model="answer.correct"> Answer {{$index + 1}}: <input type="text" ng-model="question.answers[$index].answer" /><br />
+      </div>
+        <section layout="row" layout-sm="column" layout-wrap="">
+        <md-button class="md-raised" ng-click="submitQuiz(quiz.quiz, quiz.details)">Submit Quiz</md-button>
+        <section layout="row" layout-sm="column" layout-wrap="">
+        <md-button class="md-raised" ng-click="addQuestion()">Add a Question</md-button>   
+    </form>
+  </div></div>

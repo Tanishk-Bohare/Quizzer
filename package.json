@@ -1,0 +1,29 @@
+{
+  "name": "quizzer",
+  "version": "1.0.0",
+  "description": "A quizzing platform.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node app.js"
+  },
+  "author": "Tanishk Bohare",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "bookshelf": "*",
+    "bower": "*",
+    "dotenv": "^16.0.1",
+    "express": "*",
+    "jwt-simple": "*",
+    "knex": "*",
+    "lodash": "*",
+    "pg": "*",
+    "sqlite3": "*",
+    "when": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
