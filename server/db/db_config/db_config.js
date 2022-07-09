@@ -1,10 +1,12 @@
 var path = require('path');
 var sequence = require('when/sequence');
 var _ = require('lodash');
+const { copyFileSync } = require('fs');
 // var knex;
 var migrate = require('./migrate.js')();
 
-if(process.env.MODE=='dev'){
+if(process.env.MODE=="dev"){
+  console.log("as")
   const knex = require("knex")({
     client: "pg",
     connection: {
