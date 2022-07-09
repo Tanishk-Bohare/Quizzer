@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node app.js"
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED='0' node app.js",
+    "postinstall": "bower cache clean && bower install"
   },
   "author": "Tanishk Bohare",
   "license": "ISC",
