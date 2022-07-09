@@ -1,11 +1,11 @@
 var path = require('path');
 var sequence = require('when/sequence');
 var _ = require('lodash');
-var knex;
+// var knex;
 var migrate = require('./migrate.js')();
 
 if(process.env.MODE=='dev'){
-  knex = require("knex")({
+  const knex = require("knex")({
     client: "pg",
     connection: {
       host: "localhost",
@@ -14,9 +14,12 @@ if(process.env.MODE=='dev'){
       database: process.env.DATABASE_NAME
     }
   }); 
+  var Bookshelf = require('bookshelf')(knex);
+  // Bookshelf.plugin('registry');
+  module.exports = Bookshelf;
 }
 else if (process.env.DATABASE_URL) {
-  knex = require("knex")({
+  const knex = require("knex")({
     client: "pg",
     connection: {
       host: process.env.DATABASE_HOST_OL,
@@ -31,11 +34,9 @@ else if (process.env.DATABASE_URL) {
         }
       },
     }
-  }); 
+  });
+  var Bookshelf = require('bookshelf')(knex);
+  // Bookshelf.plugin('registry');
+  module.exports = Bookshelf;
+  
 } 
-
-
-
-var Bookshelf = require('bookshelf')(knex);
-// Bookshelf.plugin('registry');
-module.exports = Bookshelf;
