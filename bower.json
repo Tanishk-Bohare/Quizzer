@@ -1,0 +1,26 @@
+{
+  "name": "quizzer",
+  "version": "1.0.0",
+  "authors": [
+    "Tanishk Bohare"
+  ],
+  "description": "A quiz platform",
+  "main": "app.js",
+  "keywords": [
+    "none"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.5",
+    "angular-ui-router": "~0.3.0",
+    "angular-material": "~1.0.9"
+  }
+}
