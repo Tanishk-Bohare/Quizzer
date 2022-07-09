@@ -37,5 +37,5 @@ else if (process.env.DATABASE_URL) {
 
 
 var Bookshelf = require('bookshelf')(knex);
-Bookshelf.plugin('registry');
+// Bookshelf.plugin('registry');
 module.exports = Bookshelf;
